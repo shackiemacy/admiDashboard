@@ -34,6 +34,11 @@ body{
 .sidebar ul li a {
     color: #ffffff;
     text-decoration: none;
+
+}
+.main-content{
+    padding-top: 50px;
+    background-attachment: fixed;
 }
 /* small devices (landscape phones, 576px and up */
 @media screen and (min-width: 576px) {
@@ -57,6 +62,85 @@ body{
     }
 
 }
+/* Extra small device (potrait phones, less than 576px */
+@media (max-width : 575.98px)
+{
+        .sidebar{
+         width:50px;
+        }
+
+        .sidebar ul li span:nth-child(2){display:none;
+        }
+        .sidebar ul li i {
+        font-size:20px
+        }
+}
+@media (min-width: 768px)
+{
+        .sidebar{width:100px;}
+        .sidebar ul li{text-align: center;}
+        .sidebar ul li span:nth-child(2)
+        {display: none;}
+        .sidebar ul li i{
+        font: size 20px;
+         }
+}
+
+@media (min-width: 768px){
+        .sidebar{width:100px;}
+        .sidebar ul li{text-align: center;}
+        .sidebar ul li span:nth-child(2){
+         display:none;
+        }
+        .sidebar ul li i{
+            font-size: 30px;
+        }
+        .main-content{
+            margin-left: 100px;
+        }
+}
+
+@media (min-width: 992px)
+{
+        .sidebar{
+            width:200px;
+        }
+        .sidebarul li{
+            text-align: left;
+        }
+        .sidebar ul li span:nth-child(2){
+            display: inline;
+        }
+        .sidebar ul li i{
+            font-size: 20px;
+        }
+        .main-content{
+            margin-left: 200px;
+        }
+
+}
+
+@media (min-width:1200px){
+    .sidebar{
+        width: 200px;
+    }
+    .sidebar ul li{
+        text-align: left;
+    }
+    .sidebar ul li span:nth-child(2)
+    {
+        display: inline;
+    }
+    .sidebar ul li i{
+        font-size: 20px;
+    }
+    .main-content{
+        margin-left: 200px;
+    }
+}
+
+
+
     
     
 
