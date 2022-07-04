@@ -1,3 +1,15 @@
+<?php
+$server='localhost';
+$username='root';
+$password='';
+$database='zalego';
+
+$conn = mysqli_connect($server,$username,$password,$database);
+
+$sql = mysqli_query($conn, "SELECT * FROM enrollment");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Admin Template</title>
-    <link rel="stylesheet" href="/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
@@ -18,7 +30,7 @@
     <nav>
         <ul> 
             <li>
-                <a href="">
+                <a href="students.php">
                     <span> <i class="fa fa-group"></i></span>
                     <span>students</span>
 
@@ -67,53 +79,34 @@
                             </tr>
                         </thead>
                     <tbody>
+                        <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)) {?>
+
                         <tr>
-                            <td>1</td>
-                            <td>Macy Wanjiku</td>
-                            <td>+254704566421</td>
-                            <td>macy@gmail.com</td>
-                            <td>female</td>
-                            <td>Web Development</td>
-                            <td>9th May 2022</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-info btn-sm">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                            </td>
+                                <td><?php echo $fetchEnrollmentRecord['no'];?></td>
+                                <td><?php echo $fetchEnrollmentRecord['fullname'];?></td>
+                                <td><?php echo $fetchEnrollmentRecord['phonenumber'];?></td>
+                                <td><?php echo $fetchEnrollmentRecord['email'];?></td>
+                                <td><?php echo $fetchEnrollmentRecord['course'];?></td>
+                                <td><?php echo $fetchEnrollmentRecord['gender'];?></td>
+                                <td><?php echo $fetchEnrollmentRecord['created_at'];?></td>
+                                <td> 
 
-
+                                    <a href="#" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-info btn-sm">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                                
+            
                         </tr>
+                            <?php  }?>   
                     </tbody>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Macy Wanjiku</td>
-                            <td>+254704566421</td>
-                            <td>macy@gmail.com</td>
-                            <td>female</td>
-                            <td>Web Development</td>
-                            <td>9th May 2022</td>
-                            <td>
-                                <a href="#" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a href="#" class="btn btn-info btn-sm">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a href="#" class="btn btn-danger btn-sm">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                            </td>
 
-
-                        </tr>
-                    </tbody>
                 </table>
             </div>
         </div>
