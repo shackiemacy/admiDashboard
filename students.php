@@ -23,7 +23,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 </head>
 <body>
 <div class="header">
-    <img src="/zalego logo.jpg" ait="zalego" height="50" class="rounded-circle">
+    <img src="images/logo2.png"ait="zalego" height="50" class="rounded-circle">
 <a href="#" class="navbar-trigger"><span></span></a>
 </div>
 <div class="sidebar">
@@ -91,7 +91,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
                                 <td><?php echo $fetchEnrollmentRecord['created_at'];?></td>
                                 <td> 
 
-                                    <a href="#" class="btn btn-primary btn-sm">
+                                    <a href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>" class="btn btn-primary btn-sm">
                                         <i class="fa fa-edit"></i>
                                     </a>
                                     <a href="#" class="btn btn-info btn-sm">

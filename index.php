@@ -1,50 +1,22 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Admin Template</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
+<?php
+require_once('includes/headers.php')
+?>
 <body>
-<div class="header">
-    <img src="/zalego logo.jpg" ait="zalego" height="50" class="rounded-circle">
-<a href="#" class="navbar-trigger"><span></span></a>
-</div>
+<?php
+require_once('includes/navbar.php')
+?>
+
 <div class="sidebar">
-    <nav>
-        <ul> 
-            <li>
-                <a href="students.php">
-                    <span> <i class="fa fa-group"></i></span>
-                    <span>students</span>
-
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span> <i class="fa fa-folder-open"></i></span>
-                    <span>courses</span>
-
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span> <i class="fa fa-graduation-cap"></i></span>
-                    <span>campus</span>
-
-                </a>
-            </li>
-        </ul>
-    </nav>
-
+    <?php
+    require_once('includes/sidebar.php')
+    ?>
 </div>
 <div class="main-content">
-            
+       
     <div class="container-fluid">
         <div class="row">
                 <div class="col-lg-12">
@@ -107,15 +79,8 @@
         </div>
     </div>
 </div>
-
-    
-
-
-
-
-
-
-<script src="/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
-<script src="/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+<?php
+require_once('includes/scripts.php')
+?>
 </body>
 </html>
