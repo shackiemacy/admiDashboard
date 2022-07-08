@@ -32,6 +32,7 @@ require_once('includes/navbar.php')
             <span>Students</span>
         </div>
         <div class="card-body"></div>
+
         <div class="card-footer"></div>
         </div>
 
