@@ -1,15 +1,21 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<?php
+<?
+require_once('logics/dbconnection.php');
+// counting total number of students
+$queryEnrolledStudents =mysqli_query($conn, "SELECT *FROM enrollment");
+$countAllStudents =mysqli_num_rows($queryEnrolledStudents);
+
+// count by gender
+$queryEnrolledFemale =mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='female'");
+$countAllFemale =mysqli_num_rows($queryEnrolledFemale);
+
 require_once('includes/headers.php')
 ?>
 <body>
 <?php
 require_once('includes/navbar.php')
 ?>
-
 <div class="sidebar">
     <?php
     require_once('includes/sidebar.php')
@@ -23,6 +29,7 @@ require_once('includes/navbar.php')
                     <div class="card-reader bg-dark text-white text-center">
                         <span>Top Content</span>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -32,10 +39,11 @@ require_once('includes/navbar.php')
             <span>Students</span>
         </div>
         <div class="card-body"></div>
-
-        <div class="card-footer"></div>
+            <span><i class="fa fa-group fa-3x"></i></span>
+            <span class ="float-end badge bg-dark rounded-pill"><?php echo $countAllStudents ?> </span>
+             <div class="card-footer">
+             </div>
         </div>
-
     <div class="col-lg-3">
         <div class="card-reader bg-dark text-white text-center">
             <span>Available courses</span>
@@ -53,7 +61,7 @@ require_once('includes/navbar.php')
         </div>
         <div class="card-body">
             <span><i class="fa fa-group"></i></span>
-            <span class="float-end">00</span>
+            <span class="float-end"><?php echo $countAllStudents ?></span>
         </div>
         <div class="card-footer"></div>
     </div>

@@ -64,7 +64,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <table class="table table-striped table-hover table-responsive">
+                <table class="table table-striped table-hover table-responsive" style="fontsize:12px;">
                         <thead>
                             
                             <tr>

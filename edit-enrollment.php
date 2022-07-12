@@ -1,42 +1,20 @@
 <?php
+
+    $message='';
 require_once('logics/dbconnection.php');
 $querystudent= mysqli_query($conn,
  "SELECT * FROM enrollment WHERE no='".$_GET['id']."'");
 while($fetchstudent =mysqli_fetch_array($querystudent))
 {
+    $id=$fetchstudent['no'];
     $fullname = $fetchstudent['fullname'];
     $phonenumber = $fetchstudent['phonenumber'];
     $email= $fetchstudent['email']; 
     $gender= $fetchstudent['gender']; 
     $course= $fetchstudent['course']; 
 }
-
-// updating user records
-if(isset($_POST['update enrollment']))
-{
-    // fetch form data
-    $fullname=$_POST['fullname'];
-    $phonenumber=$_POST['phonenumber'];
-    $email=$_POST['email'];
-    $gender=$_POST['gender'];
-    $course=$_POST['course'];
-
-    // perform sql query
-    $updaterecords =mysqli_query($conn,
-    "UPDATE enrollment set fullname='$fullname',phonenumber='$phone',email='$email',gender='$gender',course='$course',
-    WHERE id='".$_GET['id']."'");
-    if( $updaterecords)
-{
-    $message ="Records Updated Successfully!";
-}
-else{
-    $message ="Records update Unsuccessful";
-}
-    
-}
+require_once('logics/process-update.php')
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -58,17 +36,13 @@ require_once('includes/navbar.php')
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header bg-dark text-center text-white">
-                        <h4>Edit Student
-                        </h4>
-
-
-
-
+                        <h4>Edit Student</h4>
+                        <?php echo $message ?>
                     </div>
                     <div class="card-body">
     <span class="float-right"></span>
 
-        <form action="edit-enrollment.php"method="POST">
+        <form action="edit-enrollment.php?id=<?php echo $id ?>"method="POST">
             <div class="row">
                 <div  class="mb-3 col-lg-6">
                     <label for="Full Name" class="form-label"><b>Full Name</b></label>
@@ -108,7 +82,7 @@ require_once('includes/navbar.php')
         
                 <div class="update">
                     <div  class="mb-3 col-lg-4">
-                        <button type="submit" class="btn btn-primary" name="update enrollment">Update Records</button>
+                        <button type="submit" class="btn btn-primary" name="updateenrollment">Update Records</button>
                     </div>
                 </div>
         </form>
