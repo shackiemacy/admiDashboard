@@ -50,11 +50,13 @@ require_once('includes/navbar.php')
                                 <span class ="float-end badge bg-dark rounded-pill"><?php echo $countAllStudents ?> </span>
                             </div>
                                 <div class="card-footer">
-                                </div>
                                     <div class="col-lg-3">
                                         <div class="card-header bg-dark text-white text-center">
-                                                <span>Available courses</span>
+                                        <span>Available courses</span>
+                                    </div>    
+                                </div>
                 </div>
+                                    
         <div class="card-body">
             <span><i class="fa fa-group"></i></span>
             <span class="float-right">00</span>
