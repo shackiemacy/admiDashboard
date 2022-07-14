@@ -30,9 +30,9 @@ require_once('includes/headers.php')
         <div class="row">
             <div class="col-lg-6">
                 <div class="card">
-                <div class="card-header bg-dark text-white text-center">
-                    <h4 class="card-tittle">personal information</h4>
-                </div>
+                    <div class="card-header bg-dark text-white text-center">
+                        <h4 class="card-tittle">personal information</h4>
+                    </div>
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item">Full Name:<span class="float-end badge bg-primary"><?php echo $fullname ?></span> </li>
@@ -43,7 +43,6 @@ require_once('includes/headers.php')
                     </div>
                 </div>
             </div>
-            <div class="row">
             <div class="col-lg-6">
                 <div class="card">
                 <div class="card-header bg-dark text-white text-center">
