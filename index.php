@@ -44,28 +44,33 @@ require_once('includes/navbar.php')
         </div>
         <div class="row">
             <div class="col-lg-3">
-                <div class="card-header bg-dark text-white text-center">
-                    <span>Courses</span>
-                </div>
-                <div class="card-body">
-                    <span><i class="fa fa-folder-open fa-3x"></i></span>
-                    <span class="float-end badge bg-dark rounded-pill"><?php echo $countTotalStudents ?></span>
-                </div>
-                <div class="card-footer"></div>
+                <div class="card">
+                    <div class="card-header bg-dark text-white text-center">
+                        <span>Courses</span>
+                    </div>
+                    <div class="card-body">
+                        <span><i class="fa fa-folder-open fa-3x"></i></span>
+                        <span class="float-end badge bg-dark rounded-pill"><?php echo $countTotalStudents ?></span>
+                    </div>
+                    <div class="card-footer"></div>
+               </div>
             </div>
 
             <div class="col-lg-3">
-                <div class="card-header bg-dark text-white text-center">
-                    <span>campuses</span>
+                <div class="card">
+                    <div class="card-header bg-dark text-white text-center">
+                        <span>campuses</span>
+                    </div>
+                    <div class="card-body">
+                        <span><i class="fa fa-graduation-cap fa-3x"></i></span>
+                        <span class="float-end">00</span>
+                    </div>
+                    <div class="card-footer"></div>
                 </div>
-                <div class="card-body">
-                    <span><i class="fa fa-graduation-cap fa-3x"></i></span>
-                    <span class="float-end">00</span>
-                </div>
-                <div class="card-footer"></div>
             </div>
 
             <div class="col-lg-3">
+                <div class="card">
                 <div class="card-header bg-dark text-white text-center">
                     <span>User</span>
                 </div>
@@ -74,9 +79,11 @@ require_once('includes/navbar.php')
                     <span class="float-end">00</span>
                 </div>
                 <div class="card-footer"></div>
+                </div>
             </div>
 
             <div class="col-lg-3">
+                <div class="card">
                 <div class="card-header bg-dark text-white text-center">
                     <span>students</span>
                 </div>
@@ -86,6 +93,7 @@ require_once('includes/navbar.php')
                 </div>
                 <div class="card-footer"></div>
             </div>
+                </div>
         </div>
         
         <div class="row">
