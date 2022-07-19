@@ -33,11 +33,14 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
+            <div class="col-lg-12">
                 <div class="card-reader bg-dark text-white text-center">
-                    <span>Students</span>
+                    <span>Add Student</span>
+                    <a href="add-student.php" class="btn btn-primary btn-sm float-end">Add</a>
                 </div>
-
+            </div>
         </div>
+
         <div class="row">
             <div class="col-lg-12">
                 <table class="table table-striped table-hover table-responsive" style="fontsize:12px;">
@@ -70,6 +73,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
                                     <a href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
                                     <a href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
                                     <a href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    
                                 </td>
                                 
             
